@@ -1,0 +1,355 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+i {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: red;
+}
+button {
+  font-family: inherit;
+}
+.main-page {
+  background-image: url("/images/thomas-kelley-JoH60FhTp50-unsplash.jpg");
+  background-size: contain;
+}
+img {
+  width: 100%;
+}
+.nav-span {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.nav-span div {
+  background-color: black;
+  width: 38px;
+
+  height: 5px;
+  margin: 10px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 4rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin-left: auto;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+.navbar ul li a {
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.navbar ul li:nth-child(1) a {
+  transition-delay: 200ms;
+}
+.navbar ul li:nth-child(2) a {
+  transition-delay: 400ms;
+}
+.navbar ul li:nth-child(3) a {
+  transition-delay: 600ms;
+}
+
+/* main */
+.logo {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.min-logo {
+  font-size: 4rem;
+  transform: translateX(900px);
+}
+
+.main-logo {
+  font-size: 8rem;
+  opacity: 0;
+  transition-delay: 800ms;
+}
+.min-logo,
+.main-logo {
+  color: white;
+  transition: transform 900ms ease, opacity 2000ms ease;
+}
+
+/* menu */
+input[type="checkbox"].toggle {
+  display: none;
+}
+
+input[type="checkbox"].toggle:checked + ul li a {
+  opacity: 1;
+}
+
+/*About-section */
+.main-about {
+  opacity: 0;
+  transition: transform 1000ms ease, opacity 1500ms ease;
+}
+
+.About-section {
+  margin-top: 3rem;
+  color: white;
+}
+
+.About-section h2 {
+  margin-right: auto;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  justify-self: left;
+}
+.About-section > div {
+  display: grid;
+  place-items: center;
+  padding: 1em 15em 0.7rem;
+}
+.About-section div p,
+.cards div p {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+.About-section button {
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  margin-top: 0.7rem;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.9);
+}
+/* cards */
+.cards div:nth-child(1) {
+  transform: translateX(-150%);
+}
+.cards div:nth-child(2) {
+  transform: translateX(150%);
+}
+.cards div:nth-child(3) {
+  transform: translateX(-150%);
+}
+
+.cards div {
+  margin: 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(128, 128, 135);
+  border-radius: 2rem;
+  padding: 2rem;
+  opacity: 0;
+  transition: transform 700ms ease, opacity 1500ms ease;
+}
+/* pre-connect */
+
+.pre-connect > div {
+  max-width: 100%;
+  max-height: 80vh;
+  display: flex;
+  color: whitesmoke;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 0;
+  overflow: hidden;
+  gap: 1.3rem;
+  padding: 0.6rem;
+}
+
+.pre-connect div > * {
+  transition: transform 1000ms ease;
+}
+.pre-connect img {
+  width: 50%;
+  transform: translateX(-110%);
+}
+.details p {
+  line-height: 2.5rem;
+  margin-left: 3rem;
+  text-align: center;
+}
+.details {
+  font-size: 1.5rem;
+  margin-right: 0.7rem;
+  transform: translateX(110%);
+}
+
+/* connect */
+.connect-container {
+  min-height: 80vh;
+  text-align: center;
+  color: black;
+  display: grid;
+  place-items: center;
+}
+.connect {
+  background-image: url("/images/helena-lopes-e3OUQGT9bWU-unsplash.jpg");
+  background-size: cover;
+}
+/* paragraph */
+.connect-container *:nth-child(1) {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  width: 70%;
+  transform: translateY(80%);
+  opacity: 0;
+  transition: opacity 600ms ease, transform 1000ms ease-out;
+}
+
+/* button */
+.connect-container *:nth-child(2) {
+  padding: 0.9rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: black;
+  color: white;
+  box-shadow: 0 10px 15px black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15%;
+}
+
+/* footer */
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  min-height: 10rem;
+  gap: 10rem;
+  padding: 5rem;
+  color: whitesmoke;
+}
+
+footer p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+footer h3 {
+  font-size: 1.6rem;
+}
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* form */
+
+.form-section {
+  height: 100vh;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.form h2 {
+  margin-bottom: 1.3rem;
+  padding: 10px;
+}
+
+form small {
+  visibility: hidden;
+}
+.form form {
+  display: flex;
+  font-size: 1.35rem;
+  padding: 1rem;
+
+  margin-left: -50px;
+  /* margin-bottom: 100px; */
+  background-color: white;
+  color: black;
+  flex-direction: column;
+  border-radius: 2rem;
+  justify-content: space-around;
+  width: 35%;
+}
+.form-footer {
+  margin-top: 50px;
+  height: 200px;
+}
+/* text box */
+.form input {
+  padding: 0.65rem;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+form div {
+  margin: 0.5rem 0;
+}
+/*radio input div */
+.form .choices {
+  display: inline-block;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: left;
+  width: 20%;
+}
+/* radio input */
+.choices input {
+  margin: 0 10px;
+}
+form small {
+  color: rgba(0, 0, 0, 0.8);
+}
+.form-radio {
+  margin-top: 2rem;
+}
+
+/* btn */
+.form button {
+  font-size: 1.6rem;
+  width: 50%;
+  border-radius: 10px;
+  font-family: inherit;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 7px 0;
+}
+
+.success {
+  border: 3px solid green;
+}
+.error {
+  border: 3px solid red;
+}

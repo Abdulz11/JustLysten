@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script defer src="../form.js"></script>
+    <title>Sign-up</title>
+  </head>
+  <body>
+    <!-- form -->
+    <nav class="top-nav">
+      <div class="navbar">
+        <label for="menu">
+          <span class="nav-span">
+            <div></div>
+            <div></div>
+            <div></div> </span
+        ></label>
+        <input type="checkbox" class="toggle" id="menu" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Sign-up</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="form-section">
+      <div class="form">
+        <form class="sign-up-form">
+          <h2>Sign-up</h2>
+          <div class="form-name">
+            <label>Firstname</label>
+            <input type="text" placeholder="John" id="firstname" />
+            <small>Error message</small>
+          </div>
+
+          <div class="form-lastname">
+            <label>Lastname</label>
+            <input type="text" placeholder="Doe" id="lastname" />
+            <small>Error message</small>
+          </div>
+
+          <div class="form-email">
+            <label> Email</label>
+            <input type="email" id="email" placeholder="johndoe@example.com" />
+            <small>Error message</small>
+          </div>
+
+          <div class="form-tel">
+            <label>Phone</label>
+            <input
+              type="tel"
+              placeholder="Tel number"
+              id="tel"
+              maxlength="10"
+            />
+            <small>Error message</small>
+          </div>
+
+          <div class="form-radio">
+            <label>Join Newsletter</label>
+            <div class="choices">
+              <label>Yes</label>
+              <input type="radio" name="choice" value="Yes" id="radio-yes" />
+              <label>No</label>
+              <input type="radio" name="choice" value="No" id="radio-no" />
+            </div>
+            <small id="radio-txtarea">Error message</small>
+          </div>
+          <button>Sign-up</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <h3>&copy;JustLysen2022</h3>
+      <nav class="socials">
+        <p>Twitter</p>
+        <p>Facebook</p>
+        <p>Github</p>
+      </nav>
+      <nav class="info">
+        <a href="form.html"><p>Sign-up</p></a>
+        <a href="about.html"><p>About</p> </a>
+        <a href="#"><p>Connect</p></a>
+      </nav>
+    </footer>
+  </body>
+</html>
